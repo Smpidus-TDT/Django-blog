@@ -1,1 +1,1 @@
-#django-lx
+#Django Á·Ï° 
