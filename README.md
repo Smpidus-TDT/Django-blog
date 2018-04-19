@@ -1,1 +1,1 @@
-#Django Á·Ï° 
+#Django study
