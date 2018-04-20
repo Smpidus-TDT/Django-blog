@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片页面</title>
+</head>
+<body>
+<h1>{{ photo.photo_title }}</h1>
+<br/>
+
+<h3>{{ photo.photo_content}}</h3>
+<br/><br/>
+
+<h3>{{ photo.photo_adress}}</h3>
+<br/><br/>
+
+<!--超链接-->
+<a href="{% url 'blog:edit_photo' photo.id %}">修改图片</a>
+
+</body>
+</html>

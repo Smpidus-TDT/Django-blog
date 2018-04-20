@@ -4,20 +4,30 @@
     <meta charset="UTF-8">
     <title>编辑页面</title>
 </head>
+<body background="/static/img/bj.jpg">
 <body>
 
 <form action="{% url 'blog:edit_action' %}" method="post">
+     <!--只要出现post请求表单都需要添加，对于安全性要求比较严，否则禁止访问，CSRF验证失败-->
+    {% csrf_token %}
     <!--过滤器| default:'0'默认值-->
     <input type="hidden" name="article_id" value="{{article.id | default:'0'}}">
     <label>文章标题
          <input type="text" name="title" value="{{ article.title }}"/>
     </label>
-    <br/>
+    <br/><br/>
     <label>文章内容
          <input type="text" name="content" value="{{ article.content }}"/>
     </label>
-    <br/>
-    <input type="submit" value="提交">
+    <br/><br/>
+    <label>文章创建时间
+         <input type="text" name="pub_time" value="{{ article.pub_time }}"/>
+    </label>
+    <br/><br/>
+
+    <input type="submit" value="提 交">
+    <br/><br/>
+    <input type="submit" value="返 回">
 </form>
 
 </body>

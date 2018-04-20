@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>图片库</title>
+    <title>沐沐</title>
 </head>
-<body>
+<body >
 <h1>
-    <!--新文章传入0-->
-  <a href="{% url 'blog:edit_page' 0 %}">新图片库</a>
+  <a href="{% url 'blog:edit_page' 0 %}">新图片</a>
 </h1>
 
-{% for article in articles %}
-    <a href="{% url 'blog:article_page' article.id %}">{{ article.title }}</a>
+{% for photo in photos %}
+    <a href="{% url 'blog:photo_page' photo.id %}">{{ photo.photo_title }}</a>
     <br/>
 {% endfor %}
+
 </body>
 </html>

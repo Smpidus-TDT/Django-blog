@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>图片编辑页面</title>
+</head>
+<body background="/static/img/bj.jpg">
+<body>
+
+<form action="{% url 'blog:edit_photo_action' %}" method="post">
+    {% csrf_token %}
+    <!--过滤器| default:'0'默认值-->
+    <input type="hidden" name="photo_id" value="{{photo.id | default:'0'}}">
+    <label>图片文章标题
+         <input type="text" name="photo_title" value="{{ photo.photo_title }}"/>
+    </label>
+    <br/>
+    <label>图片内容
+         <input type="text" name="photo_content" value="{{ photo.photo_content }}"/>
+    </label>
+    <br/>
+    <br/>
+    <label>图片地址
+         <input type="text" name="photo_adress" value="{{ photo.photo_adress }}"/>
+    </label>
+    <br/>
+    <input type="submit" value="提交保存">
+</form>
+
+</body>
+
+</html>

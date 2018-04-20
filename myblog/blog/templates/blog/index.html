@@ -4,19 +4,61 @@
     <meta charset="UTF-8">
     <title>沐沐</title>
 </head>
-<body background="/static/img/bj.jpg">
-<h1>
+<body background="/static/img/bj3.jpg">
+
+<div id="container" style="width:100%;">
+
+<h1 style="margint-bottom:0;text-align:center;heiht:10%">沐宝小天堂</h1>
+
+    <div id="record" style="background-color: #FFD7000;height: 500px;width: 50%;float: left;">
+<b>记录集合 </b>
+<h2>
     <!--新文章传入0-->
   <a href="{% url 'blog:edit_page' 0 %}">新文章</a>
-</h1>
-
+</h2>
 
 {% for article in articles %}
     <a href="{% url 'blog:article_page' article.id %}">{{ article.title }}</a>
     <br/>
 {% endfor %}
+</div>
 
 
+<div id="picture" style="background-color:#EEEEEE;heiht:500px;width:50%;float:left;">图片集合
+<br>
+
+<h3>
+  <a href="{% url 'blog:photo_page' 0 %}">新图片</a>
+</h3>
+
+{% for photo in photos %}
+    <a href="{% url 'blog:photo_page' photo.id %}">{{ photo.photo_title }}</a>
+    <br/>
+{% endfor %}
+   </div>
+
+
+<div id="video" style="background-color:#CCCC99;heiht:500px;width:50%;float:left;">视频集合
+    <br>
+     <p>小帅哥你真棒</p>
+<a href="https://code.ziqiangxuetang.com/django/django-tutorial.html">Django自强学堂</a>
+    </div>
+
+<div id="other" style="background-color: #33CCFF;height: 500px;width: 50%;float: left;">
+<b>其他 </b>
+    <p>小家伙你好啊</p>
+</div>
+
+<div id="footer" style="background-color: #FFA500;height: 100px;clear: both;text-align:center;">
+ <br>
+     <br>
+<button>记 录</button>
+<button>相 册</button>
+<button>视 频</button>
+<button>其 他</button>
+</div>
+
+</div>
 
 </body>
 </html>

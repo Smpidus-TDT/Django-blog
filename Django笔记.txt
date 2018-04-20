@@ -214,8 +214,14 @@ list_display同时支持tuple和list
 过滤器
 list_filter =('pub_time',)
 
+24.命令
+清空数据库
+python manage.py flush
+此命令会询问是 yes 还是 no, 选择 yes会把数据全部清空掉，只留下空表。
 
-
+数据库命令行
+python manage.py dbshell
+Django 会自动进入在settings.py中设置的数据库，如果是 MySQL 或 postgreSQL,会要求输入数据库用户密码。
 
 
 
