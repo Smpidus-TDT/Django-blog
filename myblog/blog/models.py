@@ -7,7 +7,8 @@ class Article(models.Model):
     title = models.CharField(max_length=32,default='Title',verbose_name=u'文章标题')
     content = models.TextField(null=True,verbose_name=u'文章内容')
     #添加创建日期,默认为当前时间auto_now,我们需要修改设为null=True
-    pub_time = models.DateTimeField(null=True)
+    pub_time = models.DateTimeField(null=True,verbose_name=u'文章时间')
+
 
     def __unicode__(self):
         return self.title,self.content

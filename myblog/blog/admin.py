@@ -14,6 +14,6 @@ admin.site.register(Article,ArticleAdmin)
 
 class PhotoAdmin(admin.ModelAdmin):
     list_display = ('photo_title','photo_content','photo_address')
-    list_filter = ('photo_address',)
+
 
 admin.site.register(Photo,PhotoAdmin)
