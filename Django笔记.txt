@@ -224,6 +224,13 @@ python manage.py dbshell
 Django 会自动进入在settings.py中设置的数据库，如果是 MySQL 或 postgreSQL,会要求输入数据库用户密码。
 
 
-
+注：
+pycharm整理代码
+menu>code>reformal code
+notepad++转换Windows格式：
+视图》显示符号》显示行尾符
+编辑》文档格式转换》转为Windows格式（CRLF）
+Unix（LF）
+Max（CR）
 
 
